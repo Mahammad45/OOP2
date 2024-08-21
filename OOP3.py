@@ -26,11 +26,22 @@ class Cat(Animal):
     def __str__(self) -> str:
         return(f"Cat {self.name} and voice {self.voice} and color {self.color}")
     
+class Dog(Animal):
+    def __init__(self, name, voice, color):
+        super().__init__(name, voice)
+        self.color = color
+
+    def __str__(self) -> str:
+        return(f"Dog {self.name} and voice {self.voice} and color {self.color}")
+    
 cat=Cat("Barsik", "Meow", "Black")
 cat1=Cat("Murzik", "Meow", "White")
 cat2=Cat("Vaska", "Meow", "Gray")
 cat3=Cat("Pushok", "Meow", "Brown")
+dog=Dog("Sharik", "Woof", "Brown")
 
+
+print(dog.speak())
 print(cat1.lissings())
 print(cat2.lissings())
 print(cat3.lissings())
