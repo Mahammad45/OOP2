@@ -58,10 +58,12 @@ class A:
         self.a=1        
         self.b=2
 
+
+    def __str__(self) -> str:
+        return(f"A {self.a} B {self.b}")
+
 object_1=A(1) 
 
-    # def __str__(self) -> str:
-    #     return(f"A {self.a} B {self.b}")
+# print(object_1)
+# print(object_1.b)
 
-print(object_1)
-print(object_1.b)
