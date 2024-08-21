@@ -46,9 +46,22 @@ dog1=Dog("Tuzik", "Woof", "Black")
 dog2=Dog("Rizhik", "Woof", "Gray")
 
 
-print(dog2) # STR
-print(dog1.lissings())
-print(dog.speak())
-print(cat1.lissings())
-print(cat2.lissings())
-print(cat3.lissings())
+# print(dog2) # STR
+# print(dog1.lissings())
+# print(dog.speak())
+# print(cat1.lissings())
+# print(cat2.lissings())
+# print(cat3.lissings())
+
+class A:
+    def __init__(self,A):
+        self.a=1        
+        self.b=2
+
+object_1=A(1) 
+
+    # def __str__(self) -> str:
+    #     return(f"A {self.a} B {self.b}")
+
+print(object_1)
+print(object_1.b)
