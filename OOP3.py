@@ -53,19 +53,24 @@ system('clear')
 
 # 2: Множественное наследования
 class A:
-    def __init__(self,name) -> None:
-        self.name = name
+    def __init__(self, name) -> None:
+        # Конструктор класса A, инициализирующий объект с атрибутом name
+        self.name = name  # Сохраняем значение name в атрибуте объекта
 
 class B(A):
     def __init__(self, name, age) -> None:
-        super().__init__(name)
-        self.age = age
+        # Конструктор класса B, который наследует от класса A
+        super().__init__(name)  # Вызов конструктора родительского класса A для инициализации name
+        self.age = age  # Сохраняем значение age в атрибуте объекта
 
 class C(A):
-    def __init__(self, name, ) -> None:
-        super().__init__(name)
+    def __init__(self, name, age) -> None:
+        # Конструктор класса C, который также наследует от класса A
+        super().__init__(name)  # Вызов конструктора родительского класса A для инициализации name
+        self.age = age  # Сохраняем значение age в атрибуте объекта
 
 class D(B):
     def __init__(self, name, age, color) -> None:
-        super().__init__(name, age)
-        self.color = color
+        # Конструктор класса D, который наследует от класса B
+        super().__init__(name, age)  # Вызов конструктора родительского класса B для инициализации name и age
+        self.color = color  # Сохраняем значение color в атрибуте объекта
