@@ -21,8 +21,8 @@ class Cat(Animal):
         super().__init__(name, voice)
         self.color = color
 
-    # def lissings(self):
-    #     return(f"Meow! I am {self.name} and my color is {self.color}")
+    def lissings(self):
+        return(f"Meow! I am {self.name} and my color is {self.color}")
     def __str__(self) -> str:
         return(f"Cat {self.name} and voice {self.voice} and color {self.color}")
     
@@ -30,6 +30,9 @@ class Dog(Animal):
     def __init__(self, name, voice, color):
         super().__init__(name, voice)
         self.color = color
+
+    def lissings(self):
+        return super().lissings()
 
     def __str__(self) -> str:
         return(f"Dog {self.name} and voice {self.voice} and color {self.color}")
@@ -39,8 +42,12 @@ cat1=Cat("Murzik", "Meow", "White")
 cat2=Cat("Vaska", "Meow", "Gray")
 cat3=Cat("Pushok", "Meow", "Brown")
 dog=Dog("Sharik", "Woof", "Brown")
+dog1=Dog("Tuzik", "Woof", "Black")
+dog2=Dog("Rizhik", "Woof", "Gray")
 
 
+print(dog2) # STR
+print(dog1.lissings())
 print(dog.speak())
 print(cat1.lissings())
 print(cat2.lissings())
