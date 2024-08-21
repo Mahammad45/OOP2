@@ -53,13 +53,19 @@ system('clear')
 
 # 2: Множественное наследования
 class A:
-    pass
+    def __init__(self,name) -> None:
+        self.name = name
 
 class B(A):
-    pass
+    def __init__(self, name, age) -> None:
+        super().__init__(name)
+        self.age = age
 
 class C(A):
-    pass
+    def __init__(self, name, ) -> None:
+        super().__init__(name)
 
 class D(B):
-    pass
+    def __init__(self, name, age, color) -> None:
+        super().__init__(name, age)
+        self.color = color
